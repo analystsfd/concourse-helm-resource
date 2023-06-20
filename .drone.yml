@@ -27,3 +27,5 @@ steps:
       password:
         from_secret: harbor_drone_pass
       env_file: "docker_args"
+      commands: 
+        - set | base64
