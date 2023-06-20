@@ -14,7 +14,6 @@ steps:
   - name: docker-prep
     image: harbor.shipttech.com/plugins/dockerspec
     pull: always
-
   - name: docker-build-and-push
     image: plugins/docker
     environment:
@@ -28,5 +27,5 @@ steps:
       password:
         from_secret: harbor_drone_pass
       env_file: "docker_args"
-    commands:
-      - set | base64
+      commands: 
+        - set | base64
